@@ -1,0 +1,80 @@
+<html>
+
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+        <script src="phaser.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+
+    </body>
+</html>
+
+
+
+<!-- const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
+
+const game = new Phaser.Game(config);
+
+let seed = 'my_random_seed'; // Ваш сид
+let simplex; // Переменная для хранения экземпляра Simplex Noise
+
+function preload() {
+    // Загрузка ресурсов (если необходимо)
+}
+
+function create() {
+    // Установка генератора случайных чисел с сидом
+    Math.seedrandom(seed);
+    
+    // Создание экземпляра Simplex Noise
+    simplex = new SimplexNoise(Math.random);
+
+    // Генерация мира
+    generateWorld();
+}
+
+function generateWorld() {
+    const mapWidth = 10;
+    const mapHeight = 10;
+    const tileSize = 64;
+    const scale = 0.1; // Масштаб для перлин-шумов
+
+    for (let x = 0; x < mapWidth; x++) {
+        for (let y = 0; y < mapHeight; y++) {
+            // Генерация значения шума для текущей позиции
+            let noiseValue = simplex.noise2D(x * scale, y * scale);
+
+            // Преобразование значения шума в диапазон [0, 1]
+            let normalizedValue = (noiseValue + 1) / 2;
+
+            // Определение типа тайла на основе значения шума
+            if (normalizedValue < 0.4) {
+                this.add.rectangle(x * tileSize, y * tileSize, tileSize, tileSize, 0x0000ff); // Вода
+            } else if (normalizedValue < 0.6) {
+                this.add.rectangle(x * tileSize, y * tileSize, tileSize, tileSize, 0x00ff00); // Трава
+            } else {
+                this.add.rectangle(x * tileSize, y * tileSize, tileSize, tileSize, 0x8B4513); // Земля
+            }
+        }
+    }
+}
+
+function update() {
+    // Обновление логики игры
+} -->

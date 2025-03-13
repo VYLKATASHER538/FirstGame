@@ -407,7 +407,7 @@ class GameScene extends Phaser.Scene{
         menu.add(this.button)
 
 
-        const inventory_label = ["dude", "bomb", "star", "tilesNew"];
+        const inventory_label = ["dude", "bomb", "star"];
         for(let i = 0; i < inventory_label.length; i++){
             const elem = this.add.image(50 * i, 0, inventory_label[i]);
             this.inventory.push(elem)
